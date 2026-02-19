@@ -1,1 +1,31 @@
 @import "tailwindcss";
+
+:root {
+  --color-primary: #080705;
+  --color-secondary: #9ca3af;
+  --color-tertiary: #ffffff;
+
+  /* Chat UI semantic tokens */
+  --color-card: #ffffff;
+  --color-card-border: #e5e7eb;
+  --color-card-foreground: #080705;
+  --color-muted: #f3f4f6;
+  --color-muted-foreground: #6b7280;
+  --color-bubble-ai: #f3f4f6;
+  --color-bubble-user: #080705;
+  --color-input-bg: #f3f4f6;
+}
+
+@theme inline {
+  --color-primary: var(--color-primary);
+  --color-secondary: var(--color-secondary);
+  --color-tertiary: var(--color-tertiary);
+  --color-card: var(--color-card);
+  --color-card-border: var(--color-card-border);
+  --color-card-foreground: var(--color-card-foreground);
+  --color-muted: var(--color-muted);
+  --color-muted-foreground: var(--color-muted-foreground);
+  --color-bubble-ai: var(--color-bubble-ai);
+  --color-bubble-user: var(--color-bubble-user);
+  --color-input-bg: var(--color-input-bg);
+}
