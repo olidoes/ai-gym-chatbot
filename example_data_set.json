@@ -1,0 +1,173 @@
+{
+  "gym": {
+    "name": "Elevate Fitness Club",
+    "location": "Downtown Branch",
+    "contact_email": "info@elevatefitness.com",
+    "phone": "+1-555-123-4567"
+  },
+  "classes": [
+    {
+      "id": "CLS-001",
+      "name": "HIIT Blast",
+      "category": "Cardio",
+      "description": "High-Intensity Interval Training designed to burn fat and improve endurance through explosive bodyweight and strength exercises.",
+      "difficulty_level": "Intermediate",
+      "duration_minutes": 45,
+      "schedule": {
+        "day_of_week": "Monday",
+        "start_time": "18:00",
+        "end_time": "18:45",
+        "timezone": "EST"
+      },
+      "location": {
+        "room": "Studio A",
+        "floor": 2
+      },
+      "capacity": {
+        "total_slots": 20,
+        "booked_slots": 18,
+        "available_slots": 2,
+        "is_full": false,
+        "waitlist_enabled": true,
+        "waitlist_count": 3
+      },
+      "pricing": {
+        "drop_in_price": 25.0,
+        "member_price": 0.0,
+        "package_credits_required": 1,
+        "currency": "USD"
+      },
+      "equipment_required": ["Yoga mat", "Water bottle", "Towel"],
+      "calories_burn_estimate": "400-600",
+      "instructor": {
+        "id": "INS-101",
+        "name": "Alex Rivera",
+        "certifications": [
+          "NASM Certified Personal Trainer",
+          "HIIT Specialist"
+        ],
+        "experience_years": 6,
+        "specialties": ["Fat Loss", "Athletic Conditioning"],
+        "personality": {
+          "traits": ["Energetic", "Motivational", "Disciplined"],
+          "teaching_style": "High-energy coaching with strong focus on form and accountability.",
+          "music_preference": "Upbeat EDM and Hip-Hop"
+        },
+        "bio": "Alex is passionate about helping members push beyond their limits while maintaining proper technique and safety."
+      },
+      "amenities_included": ["Locker Room Access", "Showers", "Free Wi-Fi"],
+      "cancellation_policy": "Cancel at least 6 hours before class to avoid penalty.",
+      "rating": 4.8,
+      "reviews_count": 124,
+      "status": "Open for Booking"
+    },
+    {
+      "id": "CLS-002",
+      "name": "Sunrise Yoga Flow",
+      "category": "Mind & Body",
+      "description": "A calming vinyasa flow session focusing on flexibility, breathwork, and mindful movement.",
+      "difficulty_level": "Beginner",
+      "duration_minutes": 60,
+      "schedule": {
+        "day_of_week": "Wednesday",
+        "start_time": "07:00",
+        "end_time": "08:00",
+        "timezone": "EST"
+      },
+      "location": {
+        "room": "Studio B",
+        "floor": 1
+      },
+      "capacity": {
+        "total_slots": 15,
+        "booked_slots": 15,
+        "available_slots": 0,
+        "is_full": true,
+        "waitlist_enabled": true,
+        "waitlist_count": 5
+      },
+      "pricing": {
+        "drop_in_price": 20.0,
+        "member_price": 0.0,
+        "package_credits_required": 1,
+        "currency": "USD"
+      },
+      "equipment_required": ["Yoga mat"],
+      "calories_burn_estimate": "200-300",
+      "instructor": {
+        "id": "INS-102",
+        "name": "Maya Thompson",
+        "certifications": ["RYT 500 Yoga Alliance", "Meditation Instructor"],
+        "experience_years": 8,
+        "specialties": ["Flexibility", "Stress Relief", "Mindfulness"],
+        "personality": {
+          "traits": ["Calm", "Empathetic", "Patient"],
+          "teaching_style": "Gentle guidance with emphasis on breathing and alignment.",
+          "music_preference": "Soft instrumental and ambient sounds"
+        },
+        "bio": "Maya creates a peaceful space where members can reconnect with their bodies and reduce daily stress."
+      },
+      "amenities_included": [
+        "Locker Room Access",
+        "Showers",
+        "Complimentary Tea"
+      ],
+      "cancellation_policy": "Cancel at least 4 hours before class to avoid losing credit.",
+      "rating": 4.9,
+      "reviews_count": 98,
+      "status": "Fully Booked"
+    },
+    {
+      "id": "CLS-003",
+      "name": "Strength Foundations",
+      "category": "Strength Training",
+      "description": "Learn proper lifting techniques and build foundational strength using barbells and free weights.",
+      "difficulty_level": "All Levels",
+      "duration_minutes": 60,
+      "schedule": {
+        "day_of_week": "Friday",
+        "start_time": "17:30",
+        "end_time": "18:30",
+        "timezone": "EST"
+      },
+      "location": {
+        "room": "Weight Room",
+        "floor": 1
+      },
+      "capacity": {
+        "total_slots": 12,
+        "booked_slots": 7,
+        "available_slots": 5,
+        "is_full": false,
+        "waitlist_enabled": false,
+        "waitlist_count": 0
+      },
+      "pricing": {
+        "drop_in_price": 30.0,
+        "member_price": 10.0,
+        "package_credits_required": 2,
+        "currency": "USD"
+      },
+      "equipment_required": ["Training shoes", "Water bottle"],
+      "calories_burn_estimate": "300-500",
+      "instructor": {
+        "id": "INS-103",
+        "name": "Jordan Lee",
+        "certifications": ["ISSA Strength & Conditioning Coach"],
+        "experience_years": 10,
+        "specialties": ["Powerlifting", "Muscle Building", "Form Correction"],
+        "personality": {
+          "traits": ["Supportive", "Detail-Oriented", "Encouraging"],
+          "teaching_style": "Technique-focused coaching with progressive overload principles.",
+          "music_preference": "Rock and Classic Workout Anthems"
+        },
+        "bio": "Jordan believes mastering the basics is the key to long-term strength and injury prevention."
+      },
+      "amenities_included": ["Locker Room Access", "Showers"],
+      "cancellation_policy": "Cancel at least 8 hours before class for full refund.",
+      "rating": 4.7,
+      "reviews_count": 76,
+      "status": "Open for Booking"
+    }
+  ]
+}
