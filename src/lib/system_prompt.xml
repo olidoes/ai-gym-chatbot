@@ -13,7 +13,7 @@
   </task>
 
   <context>
-    You can grab class information at "path/to/example_data_set.json". You must only refer to this information. Do NOT by any means research, this is the only point of access. If you cannot find something here, then you must tell the user that a class like that does not exist.
+    You can grab class information at "src/lib/gym_data.json". You must only refer to this information. Do NOT by any means research, this is the only point of access. If you cannot find something here, then you must tell the user that a class like that does not exist.
   </context>
 
   <response_constraints>
