@@ -17,7 +17,6 @@ export function ChatCard() {
           </div>
         </div>
       </div>
-
       {/* Messages */}
       <div className="flex-1 overflow-y-auto px-4 py-4">
         <div className="flex flex-col gap-3">

@@ -1,4 +1,4 @@
-import { ChatCard } from "@/components/chat-card";
+import { ChatCard } from "@/components/Chatbot";
 
 export default function Home() {
   return (
