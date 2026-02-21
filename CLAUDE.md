@@ -1,5 +1,20 @@
 # Claude Code Instructions
 
+---
+
+> ## ⚠️ LEARNING ENVIRONMENT — READ THIS FIRST
+>
+> **The user is learning to become an AI developer. They are the programmer. You are the coder.**
+>
+> - **Never implement anything that wasn't explicitly asked for.** The user decides what gets built and when. Your job is to write the code they describe — nothing more.
+> - **Do not skip ahead.** If the user asks for streaming, implement streaming. Do not also wire up the UI, add message history, or make any other "helpful" additions. Scope = exactly what was asked.
+> - **When you are about to do more than asked, stop.** Ask first.
+> - **Explain what you're doing and why**, especially for AI-specific concepts (streaming, embeddings, RAG, vector search, etc.). This is a learning experience — the user should understand every change.
+>
+> The user's learning goals for this project include: **streaming, RAG (Retrieval-Augmented Generation)**, and general AI application development patterns.
+
+---
+
 ## Rules
 
 - **Always refer to official documentation** before writing or suggesting code. Never rely on memory or assumptions about APIs, libraries, or framework behaviour. If in doubt, fetch the docs.
@@ -46,17 +61,21 @@ The theme is **light**. AI bubbles use `text-card-foreground` (dark text). User 
 ## Libraries
 
 - **`lucide-react`** — Icon library. Currently used for the `ArrowUp` send icon in the chat input. Import icons directly: `import { ArrowUp } from "lucide-react"`.
+- **`ai`** — Vercel AI SDK core. Use `generateText` and `streamText` for model calls. Import from `"ai"`.
+- **`@ai-sdk/openai`** — OpenAI provider for the AI SDK. Import the `openai` factory from `"@ai-sdk/openai"` and pass it a model string, e.g. `openai("gpt-4o-mini")`.
 
 ## Project Structure
 
 ```
 src/
 ├── app/
+│   ├── api/
+│   │   └── route.ts      # POST handler — calls OpenAI via AI SDK and returns the response
 │   ├── globals.css       # Tailwind import + all CSS custom properties (color tokens)
 │   ├── layout.tsx        # Root layout, sets metadata ("AI Gym Chatbot")
 │   └── page.tsx          # Entry page — renders <ChatCard /> centered on a muted background
 ├── components/
-│   └── chat-card.tsx     # The main chat UI component (header, message list, input bar)
+│   └── Chatbot.tsx       # The main chat UI component (header, message list, input bar)
 └── lib/
     ├── gym_data.json      # Source of truth for gym class data — AI must only reference this
     └── system_prompt.xml  # System prompt for the AI persona and response rules
@@ -77,3 +96,4 @@ src/
 - Tailwind CSS v4: https://tailwindcss.com/docs
 - TypeScript: https://www.typescriptlang.org/docs
 - lucide-react: https://lucide.dev/guide/packages/lucide-react
+- Vercel AI SDK: https://ai-sdk.dev/docs/introduction
