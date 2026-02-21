@@ -8,6 +8,7 @@ type Message = {
 };
 
 import { ArrowUp } from "lucide-react";
+import ReactMarkdown from "react-markdown";
 
 export function ChatCard() {
   const [input, setInput] = useState("");
@@ -72,7 +73,7 @@ export function ChatCard() {
             ) : (
               <div key={index} className="flex justify-start">
                 <div className="max-w-[80%] rounded-2xl bg-bubble-ai px-4 py-2.5 text-sm leading-relaxed text-card-foreground">
-                  {message.content}
+                  <ReactMarkdown>{message.content}</ReactMarkdown>
                 </div>
               </div>
             ),
