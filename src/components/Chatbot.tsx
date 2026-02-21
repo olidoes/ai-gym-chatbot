@@ -46,7 +46,7 @@ export function ChatCard() {
   return (
     <div className="flex h-[600px] w-full max-w-lg flex-col overflow-hidden rounded-2xl border border-card-border bg-card shadow-lg">
       {/* Header */}
-      <div className="flex items-center border-b border-card-border px-5 py-4">
+      <div className="flex items-center justify-between border-b border-card-border px-5 py-4">
         <div className="flex items-center gap-3">
           <div className="flex h-8 w-8 items-center justify-center rounded-full bg-muted">
             <span className="text-xs font-medium text-muted-foreground">
@@ -58,6 +58,12 @@ export function ChatCard() {
             <p className="text-xs text-muted-foreground">Online</p>
           </div>
         </div>
+        <button
+          onClick={() => setMessages([])}
+          className="cursor-pointer rounded-lg px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-card-foreground"
+        >
+          New chat
+        </button>
       </div>
 
       {/* Messages */}
