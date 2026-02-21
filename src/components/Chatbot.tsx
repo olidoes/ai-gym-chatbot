@@ -1,6 +1,22 @@
+"use client";
+
+import { useState } from "react";
 import { ArrowUp } from "lucide-react";
 
 export function ChatCard() {
+  const [input, setInput] = useState("");
+
+  async function handleSubmit() {
+    const response = await fetch("/api", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: input }),
+    });
+
+    const data = await response.json();
+    console.log(data);
+  }
+
   return (
     <div className="flex h-[600px] w-full max-w-lg flex-col overflow-hidden rounded-2xl border border-card-border bg-card shadow-lg">
       {/* Header */}
@@ -12,7 +28,7 @@ export function ChatCard() {
             </span>
           </div>
           <div>
-            <p className="text-sm font-medium text-card-foreground">Chat</p>
+            <p className="text-sm font-medium text-card-foreground">GymBot</p>
             <p className="text-xs text-muted-foreground">Online</p>
           </div>
         </div>
@@ -20,7 +36,7 @@ export function ChatCard() {
       {/* Messages */}
       <div className="flex-1 overflow-y-auto px-4 py-4">
         <div className="flex flex-col gap-3">
-          <div className="flex justify-start">
+          {/* <div className="flex justify-start">
             <div className="max-w-[80%] rounded-2xl bg-bubble-ai px-4 py-2.5 text-sm leading-relaxed text-card-foreground">
               Hey there! How can I help you today?
             </div>
@@ -34,7 +50,7 @@ export function ChatCard() {
             <div className="max-w-[80%] rounded-2xl bg-bubble-ai px-4 py-2.5 text-sm leading-relaxed text-card-foreground">
               Sure, I can help with that.
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -44,10 +60,13 @@ export function ChatCard() {
           <textarea
             placeholder="Type a message..."
             rows={1}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
             className="max-h-32 min-h-[24px] flex-1 resize-none self-center bg-transparent text-sm leading-relaxed text-card-foreground outline-none placeholder:text-muted-foreground"
             aria-label="Message input"
           />
           <button
+            onClick={handleSubmit}
             className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary text-tertiary transition-opacity disabled:opacity-30"
             aria-label="Send message"
           >
