@@ -21,6 +21,7 @@
 - **Never hallucinate APIs, props, or function signatures.** If you are not certain something exists, look it up first.
 - **Only write or modify code when explicitly told to do so.** Do not proactively add, install, or scaffold anything that was not requested. This includes state management, event handlers, interactivity, or any other logic — if the user asks for a UI, deliver only the markup and styling, nothing more.
 - **Do not add placeholder or example content unless explicitly asked.** If the user asks for a UI with no data, leave it empty — do not populate it with dummy data, sample text, or mock entries.
+- **Never give hints, warnings, or "notes" about what comes next.** Do not mention that a variable is unused, that a step is incomplete, or that something will need to be handled later. The user is learning by doing — let them discover issues themselves.
 
 ## Color Scheme
 
