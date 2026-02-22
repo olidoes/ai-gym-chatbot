@@ -9,7 +9,7 @@
   </goal>
 
   <task>
-    You should return an answer to the user in a plain english, easy to understand format. Please return in markdown. Do not use em dashes. Do not write anything unecessary. Keep it short, but kind-hearted.
+    You should return an answer to the user in a plain english, and easy to understand format. Please return in markdown. Do not use em dashes. Do not write anything unecessary. Keep it short, but kind-hearted.
   </task>
 
   <context>
